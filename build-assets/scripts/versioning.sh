@@ -136,7 +136,7 @@ function application_build_versioned_components()
   elif [[ "${XBB_RELEASE_VERSION}" =~ 0[.]11[.]0-[5] ]]
   then
 
-    XBB_OPENOCD_GIT_URL=${XBB_OPENOCD_GIT_URL:-"https://github.com/xpack-dev-tools/openocd.git"}
+    XBB_OPENOCD_GIT_URL=${XBB_OPENOCD_GIT_URL:-"https://github.com/JackChenHR/openocd.git"}
 
     XBB_OPENOCD_GIT_BRANCH=${XBB_OPENOCD_GIT_BRANCH:-"xpack"}
     # XBB_OPENOCD_GIT_BRANCH=${XBB_OPENOCD_GIT_BRANCH:-"xpack-develop"}
