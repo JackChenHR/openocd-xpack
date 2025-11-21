@@ -19,11 +19,21 @@ function openocd_download()
   then
     (
       run_verbose_develop cd "${XBB_SOURCES_FOLDER_PATH}"
-      run_verbose git_clone \
-        "${XBB_OPENOCD_GIT_URL}" \
-        "${openocd_src_folder_name}" \
-        --branch="${XBB_OPENOCD_GIT_BRANCH}" \
-        --commit="${XBB_OPENOCD_GIT_COMMIT}"
+if [ -n "${PRIVATE_REPO_TOKEN:-}" ]; then
+  local git_url_with_token="${XBB_OPENOCD_GIT_URL/github.com/${PRIVATE_REPO_TOKEN}@github.com}"
+  echo "Using private repository with token..."
+  run_verbose git_clone \
+    "${git_url_with_token}" \
+    "${openocd_src_folder_name}" \
+    --branch="${XBB_OPENOCD_GIT_BRANCH}" \
+    --commit="${XBB_OPENOCD_GIT_COMMIT}"
+else
+  run_verbose git_clone \
+    "${XBB_OPENOCD_GIT_URL}" \
+    "${openocd_src_folder_name}" \
+    --branch="${XBB_OPENOCD_GIT_BRANCH}" \
+    --commit="${XBB_OPENOCD_GIT_COMMIT}"
+fi
       run_verbose_develop cd "${XBB_SOURCES_FOLDER_PATH}/${openocd_src_folder_name}"
       run_verbose git submodule update --init --recursive --remote
 
