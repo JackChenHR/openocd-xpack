@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xpack-dev-tools/openocd-xpack.git"
+    "url": "git+https://github.com/JackChenHR/JackChenHR/openocd-xpack.git"
   },
   "bugs": {
-    "url": "https://github.com/xpack-dev-tools/openocd-xpack/issues"
+    "url": "https://github.com/JackChenHR/openocd-xpack/issues"
   },
   "homepage": "https://xpack-dev-tools.github.io/openocd-xpack/",
   "keywords": [
@@ -35,7 +35,7 @@
     "minimumXpmRequired": "0.20.5",
     "binaries": {
       "destination": "./.content",
-      "baseUrl": "https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v0.12.0-7",
+      "baseUrl": "https://github.com/JackChenHR/openocd-xpack/releases/download/v0.12.0-7",
       "skip": 1,
       "platforms": {
         "darwin-arm64": {
