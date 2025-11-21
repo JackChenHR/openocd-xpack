@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JackChenHR/JackChenHR/openocd-xpack.git"
+    "url": "git+https://github.com/JackChenHR/openocd-xpack.git"
   },
   "bugs": {
     "url": "https://github.com/JackChenHR/openocd-xpack/issues"
